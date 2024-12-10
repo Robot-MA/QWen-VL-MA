@@ -4,7 +4,7 @@ This repository provides the implementation for Qwen-VL which is used for **Mani
 Follow the steps below to set up the environment:
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/jiafei1224/Manipulate-Anything-QwenVL.git
+git clone [https://github.com/jiafei1224/Manipulate-Anything-QwenVL.git](https://github.com/Robot-MA/QWen-VL-MA.git)
 cd Manipulate-Anything-QwenVL
 ```
 ### Step 2: Install Dependencies
