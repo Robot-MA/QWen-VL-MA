@@ -1,0 +1,6 @@
+“type”: “text”,
+“text”: f”There is a picture containing 2 frames of robot manipulation scene“,
+“text”: f”The frame with number 1 annotated on the top left refers to the previous frame, and the one with number 2 annotated refers to the current frame“,
+ “text”: f”You should only strictly reasoning from these two frames by comparing the previous frame with current frame”
+ “text”: f”Output should only be either Yes or No.”
+prompt query: 

@@ -1,0 +1,56 @@
+Background: You are an AI that looks at an image and come up with a list of robotics manipulation tasks that could be perform via a Single 6 dof parallel gripper robot arm. 
+Given a list of objects detected from the table in the image. They are:
+obj_list = [
+    'pear',
+    'blue block',
+    'black block',
+    'Bran flakes box',
+    'plastic bowl',
+    'red block',
+    'plastic red button',
+    'LEGO pieces',
+    'coffee beads',
+    'red sponge',
+    'poles',
+    'square peg'
+]
+Task 1: Using the list of items being observed on the white table, come up with a dict of all possible robotics manipulation tasks with a corresponding description of the task execution which could be perform by a 6 dof parallel gripper robot arm. 
+Task 2: For each task created, generate a json format in the same format given in the example output show in the task 3 output section. Generate and list all the task in task_lists for output in task 3.
+
+=========
+Task 1 output:
+Example dict of the tasks list:
+
+tasks_list = {
+    "pick_up_the_submarine toy": "pick up the submarine toy",
+    "push_a_toy_car": "go to the toy car and give it a push",
+    "build_a_tower": "pick up the boxes and stack them up one by one.",
+    # Add more tasks as needed
+}
+
+
+=========
+next,
+=========
+Task 2 output:
+
+Example json file for the tasks of build_a_tower:
+
+{
+  'primitive_actions': ['pick', 'place', 'pick', place 'success'],
+  'Objects': ['The green box', 'The red box', 'The blue box', 'The red box', 'The red box'],
+  'pick': [0, 0, 0, 0],
+  'place': [0, 0, 0, 0],
+  'predict': 1,
+  'verification': [
+    'Based on the image, did the robot gripper grasp onto the green box?',
+    'Based on the image, did the green box been placed on top of the red box?',
+    'Based on the image, did the robot gripper grasp onto the blue box?',
+    'Based on the image, did the blue box been placed on top of the red box?',
+  ]
+}
+
+*List out all the jsons for every task generated from task 1 for task 2 output.
+
+
+

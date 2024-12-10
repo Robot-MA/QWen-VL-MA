@@ -1,0 +1,24 @@
+```python
+
+action = obs['gripper_matrix']
+gripper_open = obs['gripper_open']  # Current state of the gripper
+
+# Apply the translation to close the lid
+action[1, 3] += 0.4
+
+# Apply the rotation to close the lid
+angle_z = np.radians(60)
+cos_half_angle = np.cos(angle_z / 2)
+sin_half_angle = np.sin(angle_z / 2)
+rotation_quaternion = [cos_half_angle, 0, 0, sin_half_angle]
+rot = self.quaternion_multiply(obs['gripper_pose'][3:], rotation_quaternion)
+
+# Close the gripper
+gripper_open = True
+
+# Predict the pose from the updated action matrix
+pred = gripper_pose_from_rlbench(action)
+trans = action[:3, 3]
+rot = obs['gripper_pose'][3:]  # Update the rotation with the new values
+
+```
