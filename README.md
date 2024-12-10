@@ -16,7 +16,10 @@ pip install -r requirements.txt
 1. Go to the [Qwen-VL-Chat repository on Hugging Face](https://huggingface.co/Qwen/Qwen-VL-Chat/tree/main).
 2. Download the **Qwen-VL-Chat Checkpoints**.
 3. Place the downloaded checkpoints into the `Qwen-VL-Chat` directory in this repository.
-### Step 4: Run the Application
+### Step 4: Go back to the main repo
+https://github.com/Robot-MA/manipulate-anything
+and follow the rest of the setup script
+
 Refer to the provided scripts and documentation for usage instructions.
 ---
 Feel free to open an issue if you encounter any problems during setup or execution.
